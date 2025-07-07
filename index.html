@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boston Monuments Directory</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Boston Monuments Directory</h1>
+        
+        <!-- Filters and Search -->
+        <div class="filter-container">
+            <div class="filter-group">
+                <label for="search">Search Monuments</label>
+                <div class="search-wrapper">
+                    <input type="text" id="search" placeholder="Search by name..." aria-label="Search monuments">
+                    <span class="search-icon">🔍</span>
+                </div>
+            </div>
+            <div class="filter-group">
+                <label for="history-filter">Historical Era</label>
+                <select id="history-filter" aria-label="Filter by historical era">
+                    <option value="">All Eras</option>
+                    <option value="Colonial">Colonial</option>
+                    <option value="Revolutionary">Revolutionary</option>
+                    <option value="Modern">Modern</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="event-filter">Associated Event</label>
+                <select id="event-filter" aria-label="Filter by associated event">
+                    <option value="">All Events</option>
+                    <option value="War">War</option>
+                    <option value="Independence">Independence</option>
+                    <option value="Cultural">Cultural</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Monuments Grid -->
+        <div class="monuments-grid" id="monuments-grid"></div>
+        
+        <!-- Pagination -->
+        <div class="pagination" id="pagination"></div>
+
+        <!-- Map Section -->
+        <div class="monument-map">
+            <h2 id="monument-title">Select a Monument</h2>
+            <div id="map" style="height: 500px;"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
